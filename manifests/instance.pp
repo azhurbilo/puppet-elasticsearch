@@ -247,7 +247,7 @@ define elasticsearch::instance(
     }
 
     # build up new config
-    $instance_conf = merge($main_config, $instance_node_name, $instance_config, $instance_datadir_config)
+    $instance_conf = deep_merge($main_config, $instance_node_name, $instance_config, $instance_datadir_config)
 
     # defaults file content
     # ensure user did not provide both init_defaults and init_defaults_file
